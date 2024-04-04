@@ -83,11 +83,11 @@ export const signin = async (req, res) => {
       res.status(201).json({ success: true, message, user: TokenData });
     } else {
       message = "Password incorrect";
-      res.status(401).json({ success: false, message });
+      res.status(200).json({ success: false, message });
     }
   } else {
     message = "User doesn't exist";
-    res.status(401).json({ success: false, message });
+    res.status(200).json({ success: false, message });
   }
 };
 
